@@ -35,7 +35,7 @@ Data Format:
 <dom-module id="nvd3-pie">
   <template>
     <div>
-      <svg id="svg"></svg>
+      <svg></svg>
     </div>
   </template>
 
@@ -144,6 +144,7 @@ Data Format:
       _setHeight: function(height) {
         if (typeof height === 'number' && height > 0) {
           this.chart.height(height);
+          this.$$('div').style.height = height + 'px';
         }
       },
 
@@ -166,12 +167,15 @@ Data Format:
       _setWidth: function(width) {
         if (typeof width === 'number' && width > 0) {
           this.chart.width(width);
+          this.$$('div').style.width = width + 'px'; 
         }
       },
 
-      attached: function() {
-        this.set('svg', this.$.svg);
+      ready: function() {
+        this.set('svg', this.$$('svg'));
+      },
 
+      attached: function() {
         if (!this.stopAutoDrawing) {
           this.generateChart();
         }
