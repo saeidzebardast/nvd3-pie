@@ -1,4 +1,4 @@
-# &lt;nvd3-pie&gt;
+# &lt;nvd3-pie&gt; [![Build Status](https://travis-ci.org/saeidzebardast/nvd3-pie.svg?branch=master)](https://travis-ci.org/saeidzebardast/nvd3-pie)
 
 Pie chart element for [Polymer](https://www.polymer-project.org) using [nvd3](http://nvd3.org/). It's part of [nvd3 charting elements](https://github.com/saeidzebardast/nvd3-elements). 
 
